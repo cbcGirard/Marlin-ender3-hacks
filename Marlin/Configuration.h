@@ -121,11 +121,7 @@
  * :[-2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
 #define SERIAL_PORT_2 -1
-<<<<<<< HEAD
-//#define BAUDRATE_2 115200   // :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000] Enable to override BAUDRATE
-=======
 #define BAUDRATE_2 250000   // :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000] Enable to override BAUDRATE
->>>>>>> ender3_canonical_2-1-2
 
 /**
  * Select a third serial port on the board to use for communication with the host.
@@ -671,15 +667,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-<<<<<<< HEAD
-    #define DEFAULT_Kp  21.73
-    #define DEFAULT_Ki   1.54
-    #define DEFAULT_Kd 76.55
-=======
     #define DEFAULT_Kp 19.21
     #define DEFAULT_Ki 1.89
     #define DEFAULT_Kd 48.79
->>>>>>> ender3_canonical_2-1-2
   #endif
 #endif
 
@@ -762,9 +752,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 10.00
-  #define DEFAULT_bedKi .023
-  #define DEFAULT_bedKd 305.4
+  #define DEFAULT_bedKp 168.50
+  #define DEFAULT_bedKi 32.40
+  #define DEFAULT_bedKd 584.13
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -1178,22 +1168,14 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-<<<<<<< HEAD
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 902. }
-=======
 #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 902.90 }
->>>>>>> ender3_canonical_2-1-2
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-<<<<<<< HEAD
-#define DEFAULT_MAX_FEEDRATE          { 150, 150, 20, 120 }
-=======
 #define DEFAULT_MAX_FEEDRATE          { 500, 500, 5, 600 }
->>>>>>> ender3_canonical_2-1-2
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1292,11 +1274,7 @@
  * The probe replaces the Z-MIN endstop and is used for Z homing.
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
-<<<<<<< HEAD
-//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
-=======
 // #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
->>>>>>> ender3_canonical_2-1-2
 
 // Force the use of the probe for Z-axis homing
 #define USE_PROBE_FOR_Z_HOMING
@@ -1505,11 +1483,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-<<<<<<< HEAD
-#define NOZZLE_TO_PROBE_OFFSET { -42, -2, -2.25 }
-=======
 #define NOZZLE_TO_PROBE_OFFSET { -40, 0, -2.65 }
->>>>>>> ender3_canonical_2-1-2
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1729,11 +1703,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-<<<<<<< HEAD
-#define Z_MAX_POS 240
-=======
 #define Z_MAX_POS 250
->>>>>>> ender3_canonical_2-1-2
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
@@ -1904,11 +1874,7 @@
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
 #define AUTO_BED_LEVELING_BILINEAR
-<<<<<<< HEAD
-//#define AUTO_BED_LEVELING_UBL
-=======
 // #define AUTO_BED_LEVELING_UBL
->>>>>>> ender3_canonical_2-1-2
 //#define MESH_BED_LEVELING
 
 /**
@@ -2216,11 +2182,7 @@
 #define EEPROM_BOOT_SILENT    // Keep M503 quiet and only give errors during first load
 #if ENABLED(EEPROM_SETTINGS)
   #define EEPROM_AUTO_INIT  // Init EEPROM automatically on any errors.
-<<<<<<< HEAD
-  //#define EEPROM_INIT_NOW   // Init EEPROM on first boot after a new build.
-=======
   #define EEPROM_INIT_NOW   // Init EEPROM on first boot after a new build.
->>>>>>> ender3_canonical_2-1-2
 #endif
 
 // @section host
